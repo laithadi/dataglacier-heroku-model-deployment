@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        ML API
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Welcome to my first ML deployment using Flask!
+        </h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="number" name="garage" placeholder="Number of garages..." />
+            <input type="number" name="fireplace" placeholder="Number of fireplaces..." />
+            <input type="number" name="baths" placeholder="Number of baths..." />
+            <input type="number" name="solar" placeholder="Is home solar? (Yes: 1, No: 0)..." />
+            <input type="number" name="electric" placeholder="Is home electric? (Yes: 1, No: 0)..." />
+            <input type="number" name="fiber" placeholder="Is home fiber? (Yes: 1, No: 0)..." />
+            <input type="number" name="glassdoors" placeholder="Glass doors? (Yes: 1, No: 0)..." />
+            <input type="number" name="swimmingpool" placeholder="Swimming pool? (Yes: 1, No: 0)..." />
+            <input type="number" name="garden" placeholder="Garden? (Yes: 1, No: 0)..." />
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        {{ prediction_text }}
+    </div>
+</body>
+
+</html>
+
